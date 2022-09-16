@@ -28,7 +28,7 @@
     box-shadow: 0px 0px 4px 2px #00000091;
 }
 
-.wave-btn:hover {
+.no-touch .wave-btn:hover {
 	/*border-radius: 10px;*/
 
 	transition: all 0.8s ease 0.2s;
@@ -42,7 +42,7 @@
     
 
 }
-.wave-btn:hover .wave-btn__waves{
+.no-touch .wave-btn:hover .wave-btn__waves{
 	top: -50px;
 }
 
