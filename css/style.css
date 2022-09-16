@@ -82,16 +82,16 @@ h3 {
     font-family: AppleBold;
     letter-spacing: 3px;
 }
-h4 {
+h4, .menu__link  {
     font-size: calc(18px + 4 * (100vw / 1280));
     color: white;
     font-family: AppleSemiBold;
 }
-.menu__link {
+/*{
     font-family: AppleRegular;
     font-size: calc(20px + 5 * (100vw / 1280));
     color: white;
-}
+}*/
 
 .btn-text {
     font-size: calc(16px + 8 * (100vw / 1280));
@@ -146,14 +146,14 @@ p {
     h3 {
         font-size: calc(22px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
     }
-    h4 {
+    h4, .menu__link {
         font-size: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
     }
-    .menu__link {
+    /*.menu__link {
 
         font-size: calc(18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
         color: white;
-    }
+    }*/
     .text-font {
         font-size: calc(18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
         line-height: calc((18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
