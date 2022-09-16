@@ -1,0 +1,1963 @@
+html, body {
+    position: relative;
+    height: 100%;
+    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;*/
+    font-family: AppleRegular;
+}
+body._lock {
+    overflow: hidden;/*убираем скрол при открытом меню*/
+}
+.wrapper {
+    min-height: 100%;/*вся оболочка wrapper была на всю высоту экрана*/
+    overflow: hidden; /*отображается только область внутри элемента, остальное будет скрыто(чтобы ничего за экран не вылезло)*/
+    display: flex;
+    flex-direction: column;
+    /*border: 10px solid;*/
+}
+main{
+    flex-direction: 1 1 auto;
+    margin-bottom: 20px;
+}
+/*Шрифты=====================================*/
+@font-face {
+    font-family: OswaldSemiBold;
+    src: url(../fonts/Oswald/static/Oswald-SemiBold.ttf);
+}
+@font-face {
+    font-family: AppleRegular;
+    src: url(../fonts/Apple/SF-Pro-Display-Regular.otf);
+}
+@font-face {
+    font-family: AppleThin;
+    src: url(../fonts/Apple/SF-Pro-Display-Thin.otf);
+}
+@font-face {
+    font-family: AppleBold;
+    src: url(../fonts/Apple/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+    font-family: AppleSemiBold;
+    src: url(../fonts/Apple/SF-Pro-Display-Semibold.otf);
+}
+/*шрифты=====================================*/
+
+/*Боковой скрол=====================================*/
+/* хром, сафари */
+::-webkit-scrollbar { width: 0px; }
+/* ie 10+ */
+.element { -ms-overflow-style: none; }
+/*боковой скрол=====================================*/
+
+/*Адаптивный текст=====================================*/
+h1 {
+    font-size: calc(70px + 70 * (100vw / 1280));
+    /**/font-family: OswaldSemiBold;
+}
+h2 {
+    font-size: calc(24px + 14 * (100vw / 1280));
+    color: white;
+    font-family: AppleBold;
+    position: relative;
+    text-align: center;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  right: 0;
+  margin: -10px auto;
+  display: block;
+  border-radius: 50px;
+}
+
+h3 {
+    font-size: calc(22px + 5 * (100vw / 1280));
+    color: white;
+    font-family: AppleBold;
+    letter-spacing: 3px;
+}
+h4 {
+    font-size: calc(18px + 4 * (100vw / 1280));
+    color: white;
+    font-family: AppleSemiBold;
+}
+.menu__link {
+    font-family: AppleRegular;
+    font-size: calc(20px + 5 * (100vw / 1280));
+    color: white;
+}
+
+.btn-text {
+    font-size: calc(16px + 8 * (100vw / 1280));
+    color: white;
+    font-family: AppleBold;
+    letter-spacing: 2px;
+}
+.text-font {
+    font-family: AppleRegular;
+    font-size: calc(18px + 5 * (100vw / 1280));
+    color: white;
+
+    line-height: calc((18px + 5 * (100vw / 1280)) + 8px);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.text-font-block, .footer-text {
+    font-family: AppleRegular;
+    font-size: calc(20px + 5 * (100vw / 1280));
+    color: white;
+    text-indent: 2px;
+    line-height: 30px;
+}
+.form-text, .gallery-text {
+    font-family: AppleRegular;
+    font-size: calc(14px + 4 * (100vw / 1280));
+    color: white;
+}
+.copyright-text, .form-copyright-text {
+    font-family: AppleThin;
+    font-size: calc(14px + 4 * (100vw / 1280));
+    color: white;
+    letter-spacing: 1px;
+}
+p {
+ text-indent: 20px; /* Отступ первой строки в пикселах */
+}
+.slider__btn, .slider__close {
+    font-size: calc(30px + 14 * (100vw / 1280));
+
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: calc(70px + (70 + 70 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    h2 {
+        font-size: calc(24px + (14 + 14 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    .btn-text {
+        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    h3 {
+        font-size: calc(22px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    h4 {
+        font-size: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    .menu__link {
+
+        font-size: calc(18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
+        color: white;
+    }
+    .text-font {
+        font-size: calc(18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
+        line-height: calc((18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
+        
+    }
+    text-font-block {
+        font-size: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+        color: white;
+        line-height: calc((18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-indent: 0;
+    }
+    .copyright-text, .form-copyright-text {
+        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    .slider__btn, .slider__close {
+        font-size: calc(30px + (14 + 14 * 0.7) * ((100vw - 320px) / 1280));
+    }
+}
+
+
+/*адаптивный текст=====================================*/
+
+/*Шапка=====================================*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7;
+    background: rgba(188, 187, 187, 0.272);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 1px 2px 1px rgba(69, 69, 69, 0.459);
+    transition: transform .3s ease;
+    
+        
+    
+}
+.header.hide {
+    transform: translateY(-20vh);
+}
+
+.header__container{
+    max-width: 100vw;
+    margin: 0px auto;
+    display: flex;
+    /*padding: 0px 5px;*/
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    min-height: 60px;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 5;
+
+}
+
+.header__logo__img{
+    
+    height: 10vh;
+    min-height: 60px;
+    width:10vh;
+    min-width: 60px;
+    border-radius: 50%;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__icon__hamb {
+    display: none;
+}
+.menu__body {
+
+}
+.menu__list > li{/*обращаемся к первым дочерним ли*/
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.menu__list__li{
+    display: flex;
+    text-align: center;
+    
+}
+.menu__link {
+    font-size: calc(20px + 5 * (100vw / 1280));
+    color: white;
+}
+
+.lines{
+    opacity: 0;
+}
+.noselect {
+	color: #555;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+a.underline {
+    text-decoration: none;
+    position: relative;
+    z-index: 15;
+}
+a.underline:after {
+    content: '';
+    display: block;
+    position: absolute; /* позиционируем относительно ссылки */
+    bottom: -5px;
+    background: #ffffff;
+    height: 3px; /* высота относительно высоты ссылки */
+    width: 0%; /* изначально ширина полосы подчеркивания равна 0% */
+    z-index: -1; /* ставим полосу подчеркивания позади текста ссылки */
+    transition: width 0.5s, opacity 0.5s; /* для плавного изменения ширины, прозрачности, тени(свечения) */
+    border-radius: 120px;
+    opacity: 0; /* изначально полоса полностью прозрачна */
+}
+
+  
+/* При наведении на ссылку, псевдоэлемент :after становится непрозрачным и шириной 100% относительно текста ссылки*/
+a.underline:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+  /*:after центрируем */
+a.underline_c:after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+/*это свойство применится только для экранов шире n пикселей*/
+@media (min-width: 1180px){
+    .menu__list{
+        display: flex;
+        align-items: center;
+    }
+    .menu__list > li{/*обращаемся к первым дочерним ли*/
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1180px){
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 7;
+        background: rgba(188, 187, 187, 0);
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 1px 2px 1px rgba(69, 69, 69, 0.459);
+        transition: transform .3s ease;
+        
+    }
+    .menu__icon{
+        z-index: 11;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        margin-right: 16px;
+        
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after{
+        left: 0;
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        border-radius: 50px;
+        transition: all 0.2s ease 0s;
+        background-color: white;
+    }
+    .bar{
+        border-radius: 50%;
+    }
+    .menu__icon::before,
+    .menu__icon::after{
+        content: "";
+       
+    }
+    .menu__icon::before{
+        top: 0;
+    }
+    .menu__icon::after{
+        bottom: 0;
+    }
+    .menu__icon span{
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .menu__icon._active span{/*для анимации иконки, cначала скрываем полоску посередине*/
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menu__icon._active::before{/*для анимации иконки, поворачиваем полоску сверху*/
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu__icon._active::after{/*для анимации иконки, поворачиваем полоску снизу*/
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    
+    .menu__body {
+        position: fixed;
+        top: 0;
+        text-align: center;
+        left: 100vw;
+        /*width: 40vw;width: 90vw;*/
+        width: 250px;
+        height: 100vh;z-index: 10;
+        background-image: linear-gradient(to right top, #03052bb8, #0c0d35bd, #19103fbd, #271048b6, #370f50bb, #460e56b3, #550a5ab9, #64045eb3, #750162bd, #870063b5, #970065b8, #a80065b2);
+        background-color: rgba(0, 0, 0, 0.63);
+        /*
+         backdrop-filter: blur(198px);
+        background-color: rgba(0, 0, 0, 0.388);
+        background-image: url(../img/blured_surfer.jpg);
+        background-size: cover;
+        background-position: center center;*/
+        padding-top: 20vh;
+        padding-bottom: 10vh;
+        transition: all 0.3s ease 0s;
+        overflow: auto;/*чтобы прокручивася сам хедер*/
+    }
+    
+    .menu__body._active {
+        left: calc(100vw - 250px);/*left: 15%;*/
+    }
+
+    .menu::before{
+        content: '';
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 10vh;
+        min-height: 60px;
+        background: rgba(188, 187, 187, 0.272);
+        
+        box-shadow: 0px 1px 2px 1px rgba(69, 69, 69, 0.459);
+        z-index: 7;
+    }
+    
+    .header__logo__img__container{
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        z-index: 9;
+        border-radius: 50%;
+        padding: 0px;
+    }
+    .header__logo__img{
+        height: 10vh;
+        min-height: 60px;
+        width: 10vh;
+        min-width: 60px;
+        border-radius: 50%;
+    }
+    .menu__list > li{
+        position: relative;
+        z-index: 200;
+        margin: 0px 0px 30px 0px;
+    }
+    .menu__list > li:last-child {
+        margin-bottom: 0;
+    }
+
+    /*.menu__link {
+        font-size: 24px;
+    }*/
+}
+/*шапка=====================================*/
+
+/*Первая страница full-screen=================*/
+.full-screen-img {
+    position: relative; /*позиционируем относительно родителя full-screen*/
+    min-height: 100vh; /*процентная величина от общей высоты области просмотра. 10vh составляет 10% от текущей высоты области просмотра*/
+    display: flex;
+    flex-direction: column;
+}
+
+.full-screen-img__body {
+    /*border: 0px solid #ece89d;margin: 50px;*/
+    padding-left: 10vw;
+    padding-top: 40vh;
+    padding-right: 7vw;
+    padding-bottom: 5vh;
+    
+    /*background: rgba(0, 0, 0, 0.242);*/
+    min-height: 100vh;
+    position: relative;
+    z-index: 2; /*свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index*/
+    display: flex;
+    flex: 1 1 auto; 
+    /*позволяем увеличиватьс
+    flex - это сокращённое свойство, определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства.
+    flex-grow: 0/1; элемент не может/может расти/растягиваться больше, чем исходный размер
+    flex-shrink: 1; элемент может сжиматься меньше, чем исходный размер
+    flex-basis: auto; исходный размер равен auto, то есть равен просто ширине элемента, но ширина элемента не задана, поэтому по содержимому
+    flex-basis: 100%; базовый размер (ширина) элемента-кнопки: теперь он равен 100% ширины родителя.
+    */
+    justify-content: space-between;/*определяет выравнивание вдоль основной оси*/
+    align-items: flex-start;/*определяет выравнивание вдоль НЕосновной оси*/
+    flex-direction: column;
+    
+}
+
+
+ .full-screen-img__title {
+    position: relative;
+    align-self:flex-end;/*Переопределяет для конкретного flex-элемента выравнивание вдоль поперечной оси (направление зависит от значения свойства flex-direction)*/
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.main-title{
+    color: #86fbff32;
+    background: url(../img/title-background-closed.jpg);
+    background-size: 100%;
+    -webkit-background-clip: text;/**/
+    
+}
+
+
+
+.full-screen-img__img {
+    background-image: linear-gradient(to right top, #03052b, #0c0d35, #19103f, #271048, #370f50, #460e56, #550a5a, #64045e, #750161, #870063, #970064, #a80064);
+    /*background-image: url(../img/dark-leafs.jpg);
+    background-image: linear-gradient(to right top, #ea4e00, #f7163a, #f60063, #e4008e, #bf00b7, #9f45d8, #7063f0, #007aff, #00a3ff, #00c4ff, #00e2ff, #5ffbf1);
+    *//*box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);*/
+    overflow: hidden;
+    position: fixed; /*для небольшого паралакс эфекта*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*используется для указания того, как <img> или <Video> следует изменить размер в соответствии с его контейнером*/
+}
+
+/*первая страница full-screen=================*/
+
+/*Вторая страница full-screen-video=================*/
+.full-screen-video {
+    position: relative; /*позиционируем относительно родителя full-screen*/
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+.full-screen-video__body {
+    padding: auto auto;
+    background: rgba(0, 0, 0, 0.527);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 1 1 auto; /*позволяем увеличиваться*/
+    /*
+    flex-grow: 1; 
+    flex-shrink: 0;Элемент не будет уменьшаться, он сохранит нужную ему ширину и не будет переносить содержимое, если размеры элемента не заданы
+    flex-base
+    */
+    justify-content:center;/*определяет выравнивание вдоль основной оси*/
+    align-items: center;/*определяет выравнивание вдоль НЕосновной оси*/
+    flex-direction: column;
+}
+/*это свойство применится только для экранов шире н пикселей*/
+@media (min-width: 700px){
+    .full-screen-video__text {
+        max-width: 72vw;
+        padding-bottom: 5vh;
+        text-align: center;  /*Выравнивание по ширине*/
+    }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+    .full-screen-video__text {
+        max-width: 80vw;
+        padding-bottom: 5vh;
+        text-align: center;  /*Выравнивание по ширине*/
+    }
+}
+@media (max-width: 550px) {
+    .full-screen-video__text {
+        max-width: 95vw;
+        padding-bottom: 5vh;
+        text-align: center;  /*Выравнивание по ширине*/
+    }
+}
+.full-screen-video__title{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.full-screen-video__video {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*filter: blur(4px);*/
+    object-fit: cover; /*используется для указания того, как <img> или <Video> следует изменить размер в соответствии с его контейнером*/
+}
+/*вторая страница full-screen-video=================*/
+
+
+/*Третья страница блоки =================================*/
+
+.image-fixed {
+    background-image: url(../img/shot_on_top_ocean.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 7px;
+    transition-duration:  0.4s;       
+}
+
+.full-screen-img-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.vertical__title {
+    display: flex;
+    justify-content:center;/*определяет выравнивание вдоль основной оси*/
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+}
+
+.full-screen-img-2__body {
+    /*background-image: linear-gradient(to right top, #bc277c, #b03891, #9e47a4, #8854b3, #6d60be, #5673ce, #3984da, #0094e1, #00b0ef, #00caf4, #00e3f4, #5ffbf1);
+    */position: relative;
+    z-index: 2;
+
+}
+
+.full-screen-img-2__img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*используется для указания того, как <img> или <Video> следует изменить размер в соответствии с его контейнером*/
+}
+@media (min-width: 970px) {
+    .vertical1 {
+        position: relative;
+        z-index: 1;
+        padding: 0px 3vw 0px 3vw;
+    }
+    .vertical2 {
+        position: relative;
+        z-index: 1;
+        padding: 10px 3vw 0px 3vw;
+    }
+
+    
+
+    .vertical__body {
+        max-width: 100vw;
+        margin: 0px auto;
+    }
+    .vertical__row {
+        display: flex;
+       /* margin: 0px -22.5px;*/
+    }
+
+    .vertical__column1 {
+        /*padding: 0px 22.5px;*/
+        margin: 10px;
+        margin-bottom: 0px;
+        flex: 0 1 33.333%;
+        display: flex;
+    }
+
+    .vertical__column2 {
+        margin: 10px;
+        margin-bottom: 0px;
+        flex: 0 1 50%;
+        display: flex;
+    }
+}
+@media (max-width: 970px) {
+    .vertical1 {
+        position: relative;
+        z-index: 1;
+        /*padding: 50px 1vw 10px 1vw;*/
+    }
+    .vertical2 {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+    }
+    .vertical__row {
+        display: flex;
+        flex-direction: column;
+        /*margin: 20px -22.5px;*/
+    }
+    
+    .vertical__column1 {
+        /*padding: 0px 22.5px;*/
+        flex: 0 1 100%;
+        display: flex;
+        margin-bottom: 1.7vh;
+    }
+    
+    .vertical__column2 {
+        /*padding: 0px 22.5px;*/
+        flex: 0 1 100%;
+        display: flex;
+        margin-bottom: 1.7vh;
+    }
+    .vertical1 {
+        position: relative;
+        z-index: 1;
+        margin-left: 12px;
+        margin-right: 12px;
+        /*padding: 50px 0vw 0px 0vw;*/
+    }
+    .vertical2 {
+        position: relative;
+        z-index: 1;
+        margin-left: 12px;
+        margin-right: 12px;
+        /*padding: 40px 1vw 50px 1vw;*/
+    }
+}
+
+.vertical__item {
+	background-color: #00000068;
+	border-radius: 7px;
+	color: #fff;
+    /*border: solid rgb(163, 163, 163);*/
+    border-width: 1px;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 0px 15px 0px;
+    box-shadow: 0px 0px 4px 2px #00000091;
+    transition-duration:  0.4s;
+    position: relative;
+   
+}
+
+.blue-tick {
+    position: absolute;
+    box-shadow: 0px 0px 2px 1px #00000091;
+    top: 17px;
+    left: 18px;
+    border-radius: 5px;
+
+}
+
+.blue-tick {
+    height: calc(18px + 4 * (100vw / 1280));
+    width: calc(18px + 4 * (100vw / 1280));
+}
+
+@media (max-width: 767px) {
+    .blue-tick {
+        height: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+        width: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+    }
+}
+
+
+
+.image-fixed:hover {
+    background-image: url(../img/shot_on_top_ocean_blurred.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 7px;
+    
+       
+}
+.vertical__item:hover {
+	background-color:  #0000006e;
+	border-radius: 8px;
+	color: #fff;
+    box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.724);
+    /*border: solid rgba(163, 163, 163, 0);*/
+	display: flex;
+	flex-direction: column;
+	/*padding: 0px 0px 15px 0px;
+    transition: all 0.3s;*/
+}
+
+.vertical__subtitle {
+	text-align: start;
+	padding: 15px 5px 10px 50px;
+	/*font-size: 24px;
+	text-transform: uppercase;*/
+}
+
+.vertical__text {
+	padding: 0px 5px 0px 15px;
+	/*font-size: 16px;
+	line-height: 30px;*/
+	flex: 1 1 auto;
+    /*text-align: justify;*/
+
+}
+.vertical__text p{
+	margin: 0px 0px 0px 0px;
+}
+
+/*третья страница блоки=================================*/
+
+
+
+/*Слайдер=================================*/
+.swiper__title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+}
+
+
+.swiper {
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    margin: auto;  
+    text-align: center;
+    /*font-size: 118px;*/
+    background-color: rgba(0, 0, 0, 0);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.slider-img{
+    max-height: 80vh;
+    max-width: 95vw;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+
+    color: #000000;
+}
+/*слайдер=================================*/
+
+
+
+/*Галерея==================================================*/
+
+.gallerry-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.gallery-title{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+
+
+@media (min-width: 1180px){
+    .gallery {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    .gallery__card {
+        position: relative;
+        height: 400px;
+        cursor: pointer;
+        overflow: hidden;
+        /*display: block;
+        flex: 25%;*/
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+@media (max-width: 1180px){
+    .gallery {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .gallery__card {
+        position: relative;
+        height: 250px;
+        cursor: pointer;
+        overflow: hidden;
+        /*display: block;
+        flex: 25%;*/
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+.gallery__card__pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery__card:hover .gallery__card__pic {
+    filter: blur(2px);
+    transform: scale(1.3) rotate(5deg);
+}
+.gallery-item-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .5s ease;
+    z-index: 2;
+}
+
+.gallery-item-text:hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.454);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity .5s ease;
+    z-index: 2;
+}
+
+.slider {
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.744);
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.slider__container {
+    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: rgba(255, 255, 255, 0.164);*/
+    width: 90vw;
+    height: 90vh;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 10px;
+    /*font-size: 30px;*/
+    z-index: 25;
+}
+
+.slider__btn_left {
+    color: #fff;
+    left: -15px;
+}
+
+.slider__btn_right {
+    color: #fff;
+    right: -15px;
+}
+
+.slider__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    color: #fff;
+    background: none;
+    border: none;
+}
+/*галерея==================================================*/
+
+
+
+
+
+
+/*Форма==================================================*/
+@media (min-width: 1400px) {
+    .last-page{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+    }
+    .location-title{
+        /*position: relative;*/
+        display: flex;
+        flex-direction: column;
+        
+        
+        background: rgba(4, 19, 91, 0);
+        /*margin-top: 3vw;*/
+        margin-right: 5vw;
+        border-radius: 7px;
+        width: 60vw;
+    }
+    .loc-title{
+        border-radius: 7px;
+        
+        /*padding: 2vw;*/
+        /*padding-bottom: 1.5vw;
+        margin-bottom: 15px;*/
+        display: flex;
+        justify-content: center;
+    }
+    .form {
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex: 0 1 100%;
+        /* */margin: 5vw;
+       margin-top: 0;
+        margin-bottom: 0px;
+        max-width: calc(30vw);
+        background: rgba(4, 19, 91, 0.532);
+        color: white;
+        padding: 3vh 3vw;
+        border-radius: 7px;
+    }
+    
+    .location{
+        display: flex;
+        flex: 0 1 100%;
+        background: #f200ff00;
+        border-radius: 7px;
+        height: 100%;
+        width: 100%;
+    }
+    .form__input {
+        height: 50px;
+        padding: 0px 20px;
+        border-radius: 5px;
+        width: 100%;
+        transition: all 0.4s ease 0s;
+    }
+    textarea.form__input{
+        padding: 10px;
+        padding-left: 20px;
+        min-height: 80px;
+        max-height: 500px;
+        width: 100%;
+        resize: vertical;/*область с текстом расстягивается только по вертикали*/
+    }
+}
+@media (min-width: 850px) and (max-width: 1400px) {
+    .last-page{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .location-title{
+        justify-content: center;
+        align-items: center;
+        /*position: relative;*/
+        display: flex;
+        flex-direction: column;
+        background: rgba(4, 19, 91, 0);
+        border-radius: 7px;
+        width: 60vw;
+    }
+
+    .loc-title{
+        border-radius: 7px;
+        /*background: rgba(4, 19, 91, 0.532);*/
+        /*padding: 2vw;*/
+        /*padding-bottom: 1.5vw;*/
+        /*margin-bottom: 10px;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+    }
+    .form {
+        backdrop-filter: blur(10px);
+        justify-self: center;
+        display: flex;
+        flex: 0 1 100%;
+        
+        max-width: 50vw;
+        background: rgba(4, 19, 91, 0.532);
+        color: white;
+        padding: 3vh 3vw;
+        border-radius: 7px;
+    }
+    
+    .location{
+        display: flex;
+        background: #0679f375;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        border-radius: 7px;
+        width: 90vw;
+        height: 70vh;
+    }
+    .form__input {
+        height: 50px;
+        padding: 0px 20px;
+        border-radius: 5px;
+        width: 44vw;
+        /*font-size: 18px;*/
+        transition: all 0.4s ease 0s;
+    }
+    textarea.form__input{
+        padding: 10px;
+        padding-left: 20px;
+        min-height: 80px;
+        max-height: 500px;
+        max-width: 44vw;
+        resize: vertical;/*область с текстом расстягивается только по вертикали*/
+    }
+}
+@media (min-width: 500px) and (max-width: 850px) {
+    .last-page{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .location-title{
+        justify-content: center;
+        align-items: center;
+        /*position: relative;*/
+        display: flex;
+        flex-direction: column;
+        background: rgba(4, 19, 91, 0);
+        border-radius: 7px;
+        width: 60vw;
+    }
+
+    .loc-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 97vw;
+    }
+
+    .location{
+        display: flex;
+        background: #0679f375;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        border-radius: 7px;
+        width: 97vw;
+        height: 88vh;
+    }
+    .form {
+        backdrop-filter: blur(10px);
+        justify-self: center;
+        display: flex;
+        flex: 0 1 100%;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        max-width: 78vw;
+        background: rgba(4, 19, 91, 0.532);
+        color: white;
+        padding: 3vh 3vw;
+        border-radius: 7px;
+    }
+    
+    
+    .form__input {
+        height: 50px;
+        padding: 0px 15px;
+        border-radius: 5px;
+        width: 73vw;
+        /*font-size: 18px;*/
+        transition: all 0.4s ease 0s;
+    }
+    textarea.form__input{
+        padding: 10px;
+        padding-left: 20px;
+        min-height: 80px;
+        max-height: 500px;
+        max-width: 73vw;
+        resize: vertical;/*область с текстом расстягивается только по вертикали*/
+    }
+}
+@media (max-width: 500px) {
+    .last-page{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .location-title{
+        justify-content: center;
+        align-items: center;
+        /*position: relative;*/
+        display: flex;
+        flex-direction: column;
+        background: rgba(4, 19, 91, 0);
+        border-radius: 7px;
+        width: 60vw;
+    }
+
+    .loc-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 97vw;
+    }
+
+    .location{
+        display: flex;
+        background: #0679f375;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        border-radius: 7px;
+        width: 97vw;
+        height: 88vh;
+    }
+    .form {
+        backdrop-filter: blur(10px);
+        justify-self: center;
+        display: flex;
+        flex: 0 1 100%;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        max-width: 97vw;
+        background: rgba(4, 19, 91, 0.532);
+        color: white;
+        padding: 3vh 3vw;
+        border-radius: 7px;
+    }
+    
+    
+    .form__input {
+        height: 50px;
+        padding: 0px 15px;
+        border-radius: 5px;
+        width: 92vw;
+        /*font-size: 18px;*/
+        transition: all 0.4s ease 0s;
+    }
+    textarea.form__input{
+        padding: 10px;
+        padding-left: 20px;
+        min-height: 80px;
+        max-height: 500px;
+        max-width: 91vw;
+        resize: vertical;/*область с текстом расстягивается только по вертикали*/
+    }
+}
+
+.last-page{
+    margin-bottom: 5vh;
+}
+.loc-title {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.form-title-form__box {
+    display: flex;
+    flex-direction: column;
+}
+.form__title {
+
+    display: flex;
+    margin: 0 auto; 
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    
+}
+.form__item {
+    margin: 0px 0px 20px 0px;
+}
+.form__label {
+    /*font-size: 18px;*/
+    display: block;
+    margin: 0px 0px 10px 0px;
+}
+/*.form__input {
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    width: 24vw;
+    font-size: 18px;
+    transition: all 0.4s ease 0s;
+}*/
+
+.form__input:focus{
+    box-shadow: 0 0 15px white;
+}
+
+.form__input._error{
+    box-shadow: 0 0 115px rgb(255, 0, 0);
+}
+
+
+
+.options {
+    padding-top: 10px;
+}
+.options__item {
+    margin-bottom: 10px;
+}
+.options__input {
+    display: none;/*скрываем кружки*/
+
+}
+.options__input:checked + .options__label::after{/*если выбрать поле появится кружочек*/
+    transform: scale(1);
+}
+.options__label {
+    display: inline-flex;/*контент внутри контейнера флексовый, но сам контейнер ведет себя как инлайновый элемент, то есть - им можно задавать размеры, рамки и отступы, как и блочным элементам;- их ширина по умолчанию зависит от содержания, а не растягивается на всю ширину контейнера;- элементы в одной строке выравниваются вертикально подобно строчным элементам (verticacal-align)*/
+    /*font-size: 16px;
+    line-height: 140%;*/
+    align-items: center;/*определяет выравнивание вдоль НЕосновной оси*/
+    position: relative;
+    cursor: pointer;
+}
+.options__label::before {
+    content: "";
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: rgba(71, 7, 83, 0.596);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.options__label::after{
+    transition: transform 0.3s ease 0s;/*плавное появление кружочка*/
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color:rgba(34, 240, 240, 0.893);
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 2px #21e1ff91;
+    transform: scale(0); /*скрываем куружочек, масштабирование элемента*/
+}
+
+.file__item {
+    position: relative;
+}
+.file__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.file__button {/*бутофорная кнопка на которую мы накладываем file__input*/
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #007aff;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 2px 1px #00000091;
+}
+.file__preview {/*preview прикрепленного фото*/
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    max-width: 100px;
+    padding: 10px 0px 0px 0px;
+}
+.file__preview img {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+.checkbox._error .checkbox__label::before{
+    box-shadow: 0 0 115px rgb(255, 0, 0);
+}
+.checkbox__input {/*скрываем оригинальный квадратик с галочкой*/
+    display: none;
+}
+.checkbox__input:checked + .checkbox__label::after{
+    transform: scale(1);
+}
+.checkbox__label {
+    /*font-size: 16px;*/
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox__label::before {
+    content: "";
+    align-self: flex-start; /*если много строк, чтобы квадратик был не посередине, а возле первой строки*/
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.769);
+    border: 1px solid #7eaddb;
+    border-radius: 4px;
+    margin: 0px 10px 0px 0px;
+}
+.checkbox__label::after {
+    transition: transform 0.3s ease 0s;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-image: url(../img/pink-tick.png);
+    background-size:cover;
+    border-radius: 0px;
+    transform: scale(0);
+}
+
+
+
+.form__button {
+    display: flex;
+
+    /*border-radius: 100%;
+    
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    
+    min-height: 60px;*/
+    background-color: #ffffff00;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+
+
+/*Select==================================================*/
+
+.select {
+    display: block;
+    max-width: 215px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.308);
+    border-radius: 4px 4px 0px 0px ;
+}
+
+.new-select {
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px 4px 0px 0px ;
+}
+
+.new-select__list {
+    border-radius: 0px 0px 4px 4px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    border-bottom-style: 1px solid #ced4da;
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    background: rgba(189, 36, 209, 0.929);
+    /*padding: 10px;*/
+    user-select: none;
+}
+
+.new-select__list.on {
+
+    display: block;
+}
+
+.new-select__item span{
+    border: 1px solid #ced4da;
+    display: block;
+    padding: 10px;
+}
+
+.new-select__item span:hover {
+    transition: all 0.2s ease 0s;
+    color: #5ad6ef;
+    background: rgb(165, 29, 183);
+
+}
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    opacity: 0.6;
+
+    -webkit-transition: all .27s ease-in-out;
+        -o-transition: all .27s ease-in-out;
+            transition: all .27s ease-in-out;
+
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.new-select.on:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+            
+}
+/*select==================================================*/
+
+/*форма==================================================*/
+
+
+/*Футер==================================================*/
+
+
+
+
+
+.footer__socials__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding-top: 10px;*/
+
+    /*border-top: 5px solid #fff;
+    border-radius: 150px;*/
+}
+.footer__socials {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 70px);
+    /*
+    grid-template-columns данное свойство используется для определения количества и ширины колонок. При этом, можно определять как свойства для каждой колонки в отдельности, так и устанавливать ширину всех колонок с помощью функции repeat().
+    repeat() мы может установить одинаковую ширину/высоту для колонок/строк;
+    minxmax() позволяет указывать минимальное и максимальное значение одновременно. Если нам надо, чтобы колонки были минимум в 100px и максимум в 1fr (oставшееся доступное место).
+    Разница между auto-fill и auto-fit видна только, когда в строке есть место для новых колонок. С auto-fit контент будет растягиваться для заполнения всей ширины строки. А применение auto-fill приводит к тому, что элементы растягиваться не будут..
+    auto-fill как бы говорит “я автоматически заполню строку таким количеством колонок, как это возможно с учетом заданной ширины”
+    */
+    justify-content: center;
+    gap: 2vh 2vw;
+    margin-top: 15px;
+}
+/*grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));*/
+.footer__socials .icon {
+    /*margin-top: 15px;
+    border: 5px solid #ef0202;
+    margin: 2vw;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.footer__socials .icon span{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #fff;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.772);
+}
+.footer__socials .icon span i{
+   font-size: 25px;
+   line-height: 60px;
+}
+.footer__socials .icon:hover span{
+    color: #fff;
+}
+.footer__socials .icon .toolflip {
+    position: absolute;
+    top: 0px;
+    display: block;
+    background: #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.731);
+    opacity: 0;
+    pointer-events: none;/*предотвращает события указателя (как правило, мыши) для элемента: hover, active, click и т. п., в том числе и JavaScript событие click*/
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.footer__socials .icon:hover .toolflip {
+    top: -60px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.footer__socials .icon .toolflip:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: rgb(255, 255, 255);
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+
+
+
+
+
+
+/*это свойство применится только для экранов шире 1180 пикселей*/
+.contact__types {
+    margin: 5px;
+}
+@media (min-width: 1180px){
+    .footer__container {
+        position: relative;
+        z-index: 2;
+        /*display: flex;*/
+        /*background-image: url(../img/dark_sea.jpg);
+        background-size: cover;*/
+        background-image: linear-gradient(to right top, #090909, #120e1f, #131232, #131445, #111559, #1a1665, #231770, #2e167b, #3f167f, #4e1784, #5c1787, #6a178b);
+        margin-bottom: 0;
+        min-height: 100%;
+        padding: 30px 7vw;
+        padding-bottom: 15px;/**/
+    }
+    .footer__container__contact__logo__about{
+        /*border: 5px solid #ef0202;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer__contacts {
+        /*border: 5px solid #ef0202;*/
+        margin: 10px;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        /*align-self: center;*/
+        margin-bottom: 15px;
+        width: 30vw;
+        min-width: 320px;
+    }
+    
+    .contacts__title {
+        margin: 0 0 10px 0;
+    }
+    
+    .footer__logo {
+        /*border: 5px solid #ef0202;*/
+        align-self:center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        margin-bottom: 10px;
+    }
+    .footer__logo__title{
+        font-size: 50px;
+        font-family: OswaldSemiBold;
+        text-transform: uppercase;
+        color: #007bff00;
+        background: url(../img/title-background-closed.jpg);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        margin-bottom: 10px;
+    }
+    
+    .footer__logo__img__container{
+        height: 100px;
+        width: 100px;
+        /*border: 5px solid #ef0202;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__logo__img{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    .footer__about{
+        /*border: 5px solid #ef0202;*/
+        margin: 10px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        margin-bottom: 15px;
+        width: 30vw;
+        min-width: 320px;
+    }
+    .about__title{
+        margin: 0 0 10px 0;
+    }
+    .about__text{
+
+    }
+    
+    .footer__copyright {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
+        height: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+}
+@media (min-width: 830px) and (max-width: 1180px) {
+    .footer__container {
+        position: relative;
+        z-index: 2;
+        /*display: flex;*/
+        /*background-image: url(../img/dark_sea.jpg);
+        background-size: cover;*/
+        background-image: linear-gradient(to right top, #090909, #120e1f, #131232, #131445, #111559, #1a1665, #231770, #2e167b, #3f167f, #4e1784, #5c1787, #6a178b);
+        margin-bottom: 0;
+        min-height: 100%;
+        /**/padding: 15px 5vw;
+        padding-bottom: 15px;
+    }
+    .footer__container__contact__logo__about{
+        /*border: 5px solid #ef0202;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer__contacts {
+        /*border: 5px solid #ef0202;*/
+        margin: 10px;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        /*align-self: center;*/
+        margin-bottom: 15px;
+        width: 40vw;
+    }
+    
+    .contacts__title {
+        margin: 0 0 10px 0;
+    }
+    .contact__type {
+
+    }
+    .contact__type {
+    }
+    .contact__link {
+
+    }
+    .footer__logo {
+        display: none;
+    }
+   
+    .footer__about{
+        /*border: 5px solid #ef0202;*/
+        margin: 10px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        margin-bottom: 15px;
+        width: 40vw;
+    }
+    .about__title{
+        margin: 0 0 10px 0;
+    }
+    .about__text{
+    }
+    
+    .footer__copyright {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
+        height: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+}
+@media (min-width: 0px) and (max-width: 830px) {
+    .footer__container {
+        position: relative;
+        z-index: 2;
+        /*display: flex;*/
+        /*background-image: url(../img/dark_sea.jpg);
+        background-size: cover;*/
+        background-image: linear-gradient(to right top, #090909, #120e1f, #131232, #131445, #111559, #1a1665, #231770, #2e167b, #3f167f, #4e1784, #5c1787, #6a178b);
+        margin-bottom: 0;
+        min-height: 100%;
+        padding: 15px 3vw;
+        padding-bottom: 15px;/**/
+    }
+    .footer__container__contact__logo__about{
+        /*border: 5px solid #ef0202;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer__contacts {
+        /*border: 5px solid #ef0202;*/
+        /*margin: 10px;*/
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;/**/
+        margin-bottom: 25px;
+        /*width: 86vw;*/
+        
+    }
+    
+    .contacts__title {
+        text-align: center;
+        margin: 0 0 10px 0;
+
+    }
+    .footer__logo {
+        display: none;
+    }
+    .footer__about{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-bottom: 15px;
+        /*width: 86vw;*/
+        text-align: center;
+    }
+    .about__title{
+        margin: 0 0 10px 0;
+    }
+    .about__text{
+        text-align: justify;
+    }
+    
+    .footer__socials .icon span{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        display: block;
+        background: #fff;
+        text-align: center;
+        border-radius: 50%;
+        z-index: 2;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.772);
+    }
+    .footer__socials .icon span i{
+        font-size: 25px;
+        line-height: 50px;
+     }
+    .footer__copyright {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
+        height: 100%;
+        padding: 15px 3vw;
+    }
+}
+
+.footer__socials .icon:hover span,
+.footer__socials .icon:hover .toolflip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.footer__socials .telegram:hover span,
+.footer__socials .telegram:hover .toolflip,
+.footer__socials .telegram:hover .toolflip:before {
+    background: #229ED9;
+}
+.footer__socials .instagram:hover span
+{
+    background-image: url(../img/instagram.png);
+    background-size: cover;
+}
+.footer__socials .instagram .toolflip{
+    background-image: url(../img/instagram-toolflip.png);
+    background-size: cover;
+}
+.footer__socials .instagram .toolflip:before{
+    background-image: url(../img/instagram-toolflip-before.png);
+    background-size: cover;
+}
+.footer__socials .facebook:hover span,
+.footer__socials .facebook:hover .toolflip,
+.footer__socials .facebook:hover .toolflip:before {
+    background: #3B5999;
+}
+.footer__socials .twitter:hover span,
+.footer__socials .twitter:hover .toolflip,
+.footer__socials .twitter:hover .toolflip:before {
+    background: #46C1F6;
+}
+.footer__socials .youtube:hover span,
+.footer__socials .youtube:hover .toolflip,
+.footer__socials .youtube:hover .toolflip:before {
+    background: #ef0202;
+}
+.footer__socials .github:hover span,
+.footer__socials .github:hover .toolflip,
+.footer__socials .github:hover .toolflip:before {
+    background: #333;
+}
+.footer__socials .viber:hover span,
+.footer__socials .viber:hover .toolflip,
+.footer__socials .viber:hover .toolflip:before {
+    background: #7360f2;
+}
+.footer__socials .whatsapp:hover span,
+.footer__socials .whatsapp:hover .toolflip,
+.footer__socials .whatsapp:hover .toolflip:before {
+    background: #25d466;
+}
+
+.copyright-text {
+    color: #a6a6a6;
+    
+}
+/*футер==================================================*/
