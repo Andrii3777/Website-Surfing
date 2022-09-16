@@ -9,6 +9,7 @@ html, body {
 body._lock {
     overflow: hidden;/*убираем скрол при открытом меню*/
 }
+
 .wrapper {
     min-height: 100%;/*вся оболочка wrapper была на всю высоту экрана*/
     overflow: hidden; /*отображается только область внутри элемента, остальное будет скрыто(чтобы ничего за экран не вылезло)*/
@@ -56,7 +57,7 @@ h1 {
     /**/font-family: OswaldSemiBold;
 }
 h2 {
-    font-size: calc(24px + 14 * (100vw / 1280));
+    font-size: calc(20px + 16 * (100vw / 1280));
     color: white;
     font-family: AppleBold;
     position: relative;
@@ -77,13 +78,13 @@ h2::after {
 }
 
 h3 {
-    font-size: calc(22px + 5 * (100vw / 1280));
+    font-size: calc(18px + 7 * (100vw / 1280));
     color: white;
     font-family: AppleBold;
-    letter-spacing: 3px;
+    /*letter-spacing: 3px;*/
 }
 h4, .menu__link  {
-    font-size: calc(18px + 4 * (100vw / 1280));
+    font-size: calc(14px + 6 * (100vw / 1280));
     color: white;
     font-family: AppleSemiBold;
 }
@@ -94,35 +95,35 @@ h4, .menu__link  {
 }*/
 
 .btn-text {
-    font-size: calc(16px + 8 * (100vw / 1280));
+    font-size: calc(14px + 8 * (100vw / 1280));
     color: white;
     font-family: AppleBold;
     letter-spacing: 2px;
 }
 .text-font {
     font-family: AppleRegular;
-    font-size: calc(18px + 5 * (100vw / 1280));
+    font-size: calc(12px + 9 * (100vw / 1280));
     color: white;
 
-    line-height: calc((18px + 5 * (100vw / 1280)) + 8px);
-    font-weight: 500;
+    line-height: calc((12px + 9 * (100vw / 1280)) + 8px);
+    /*font-weight: 500;*/
     letter-spacing: 2px;
 }
 .text-font-block, .footer-text {
     font-family: AppleRegular;
-    font-size: calc(20px + 5 * (100vw / 1280));
+    font-size: calc(12px + 9 * (100vw / 1280));
     color: white;
     text-indent: 2px;
     line-height: 30px;
 }
 .form-text, .gallery-text {
     font-family: AppleRegular;
-    font-size: calc(14px + 4 * (100vw / 1280));
+    font-size: calc(10px + 8 * (100vw / 1280));
     color: white;
 }
 .copyright-text, .form-copyright-text {
     font-family: AppleThin;
-    font-size: calc(14px + 4 * (100vw / 1280));
+    font-size: calc(10px + 8 * (100vw / 1280));
     color: white;
     letter-spacing: 1px;
 }
@@ -138,16 +139,16 @@ p {
         font-size: calc(70px + (70 + 70 * 0.7) * ((100vw - 320px) / 1280));
     }
     h2 {
-        font-size: calc(24px + (14 + 14 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(20px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
     }
     .btn-text {
-        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(14px + (12 + 12 * 0.7) * ((100vw - 320px) / 1280));
     }
     h3 {
-        font-size: calc(22px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(18px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
     }
     h4, .menu__link {
-        font-size: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
     }
     /*.menu__link {
 
@@ -155,23 +156,26 @@ p {
         color: white;
     }*/
     .text-font {
-        font-size: calc(18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280));
-        line-height: calc((18px + (5 + 5 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
+        font-size: calc(12px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
+        line-height: calc((12px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
         
     }
     text-font-block {
-        font-size: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
-        color: white;
-        line-height: calc((18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-indent: 0;
+        font-size: calc(12px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
+        /*line-height: calc((18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280)) + 8px);*/
+        /*font-weight: 600;*/
     }
     .copyright-text, .form-copyright-text {
-        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(10px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
     }
     .slider__btn, .slider__close {
         font-size: calc(30px + (14 + 14 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    .form-text, .gallery-text {
+        font-size: calc(10px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    .btn-text {
+        font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
     }
 }
 
@@ -283,7 +287,7 @@ a.underline:after {
 
   
 /* При наведении на ссылку, псевдоэлемент :after становится непрозрачным и шириной 100% относительно текста ссылки*/
-a.underline:hover:after {
+.no-touch a.underline:hover:after {
     width: 100%;
     opacity: 1;
 }
@@ -731,7 +735,7 @@ a.underline_c:after {
 
 
 
-.image-fixed:hover {
+.no-touch .image-fixed:hover {
     background-image: url(../img/shot_on_top_ocean_blurred.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -739,7 +743,7 @@ a.underline_c:after {
     
        
 }
-.vertical__item:hover {
+.no-touch.vertical__item:hover {
 	background-color:  #0000006e;
 	border-radius: 8px;
 	color: #fff;
@@ -895,7 +899,7 @@ a.underline_c:after {
     transition: 0.5s;
 }
 
-.gallery__card:hover .gallery__card__pic {
+.no-touch .gallery__card:hover .gallery__card__pic {
     filter: blur(2px);
     transform: scale(1.3) rotate(5deg);
 }
@@ -913,7 +917,7 @@ a.underline_c:after {
     z-index: 2;
 }
 
-.gallery-item-text:hover{
+.no-touch .gallery-item-text:hover{
     position: absolute;
     top: 0;
     left: 0;
@@ -1508,7 +1512,7 @@ a.underline_c:after {
     padding: 10px;
 }
 
-.new-select__item span:hover {
+.no-touch .new-select__item span:hover {
     transition: all 0.2s ease 0s;
     color: #5ad6ef;
     background: rgb(165, 29, 183);
@@ -1608,7 +1612,7 @@ a.underline_c:after {
    font-size: 25px;
    line-height: 60px;
 }
-.footer__socials .icon:hover span{
+.no-touch .footer__socials .icon:hover span{
     color: #fff;
 }
 .footer__socials .icon .toolflip {
@@ -1625,7 +1629,7 @@ a.underline_c:after {
     pointer-events: none;/*предотвращает события указателя (как правило, мыши) для элемента: hover, active, click и т. п., в том числе и JavaScript событие click*/
     transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.footer__socials .icon:hover .toolflip {
+.no-touch .footer__socials .icon:hover .toolflip {
     top: -60px;
     opacity: 1;
     pointer-events: auto;
@@ -1903,16 +1907,16 @@ a.underline_c:after {
     }
 }
 
-.footer__socials .icon:hover span,
+.no-touch .footer__socials .icon:hover span,
 .footer__socials .icon:hover .toolflip {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
 }
-.footer__socials .telegram:hover span,
+.no-touch .footer__socials .telegram:hover span,
 .footer__socials .telegram:hover .toolflip,
 .footer__socials .telegram:hover .toolflip:before {
     background: #229ED9;
 }
-.footer__socials .instagram:hover span
+.no-touch .footer__socials .instagram:hover span
 {
     background-image: url(../img/instagram.png);
     background-size: cover;
@@ -1925,32 +1929,32 @@ a.underline_c:after {
     background-image: url(../img/instagram-toolflip-before.png);
     background-size: cover;
 }
-.footer__socials .facebook:hover span,
+.no-touch .footer__socials .facebook:hover span,
 .footer__socials .facebook:hover .toolflip,
 .footer__socials .facebook:hover .toolflip:before {
     background: #3B5999;
 }
-.footer__socials .twitter:hover span,
+.no-touch .footer__socials .twitter:hover span,
 .footer__socials .twitter:hover .toolflip,
 .footer__socials .twitter:hover .toolflip:before {
     background: #46C1F6;
 }
-.footer__socials .youtube:hover span,
+.no-touch .footer__socials .youtube:hover span,
 .footer__socials .youtube:hover .toolflip,
 .footer__socials .youtube:hover .toolflip:before {
     background: #ef0202;
 }
-.footer__socials .github:hover span,
+.no-touch .footer__socials .github:hover span,
 .footer__socials .github:hover .toolflip,
 .footer__socials .github:hover .toolflip:before {
     background: #333;
 }
-.footer__socials .viber:hover span,
+.no-touch .footer__socials .viber:hover span,
 .footer__socials .viber:hover .toolflip,
 .footer__socials .viber:hover .toolflip:before {
     background: #7360f2;
 }
-.footer__socials .whatsapp:hover span,
+.no-touch .footer__socials .whatsapp:hover span,
 .footer__socials .whatsapp:hover .toolflip,
 .footer__socials .whatsapp:hover .toolflip:before {
     background: #25d466;
