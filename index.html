@@ -1,0 +1,514 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+  <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+    <head>
+        <!-- Заголовок страницы в браузере -->
+        <title>Surfing</title>
+        <!-- Кодировка страницы -->
+        <!-- С появлением HTML5 можно использовать  -->
+        <meta charset="UTF-8">
+        <!-- Отключает формирование ссылки у номера телефона на iOS -->
+        <meta name="format-detection" content="telephone=no">
+        <!-- Подключаем CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/null.css">
+        <link rel="stylesheet" href="./css/wave_btn.css">
+        <!--<link rel="stylesheet" href="./css/slider.css"> -->
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <!-- Настройки адаптивности страницы  -->
+        <!-- Адаптивность  -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" href="./img/favicon.ico">
+    </head>
+    <!-- Отображаемое тело страницы -->
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__logo__img__container"><img class="header__logo__img" src="./img/logo-surfing.png" alt=""></div>
+                        <a href="" class="header__logo"></a>
+                        <div class="header__menu menu">
+                            
+                                <!--
+                                <div class="hamb">
+                                    <div class="hamb__field" id="hamb">
+                                        <span class="bar"></span> <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="menu__icon"><!--клас будущего бургера-->
+                                    <span class="bar"></span>
+                                </div>
+                            </div>
+                            <nav class="menu__body  noselect">
+                                <ul class="menu__list">
+                                <li><a data-goto=".page__section__2" href="#" class="menu__link underline underline_c">About us</a></li>
+                                <li><a data-goto=".page__section__3" href="#" class="menu__link underline underline_c">Swiper</a></li>
+                                <li><a data-goto=".page__section__4" href="#" class="menu__link underline underline_c">Our possibilities</a></li>
+                                <li><a data-goto=".page__section__5" href="#" class="menu__link underline underline_c">Gallery</a></li>
+                                <li><a data-goto=".page__section__6" href="#" class="menu__link underline underline_c">Sign up</a></li>
+                                <li><a data-goto=".page__section__7" href="#" class="menu__link underline underline_c">Location</a></li>
+                                <li><a data-goto=".page__section__8" href="#" class="menu__link underline underline_c">Contacts</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    
+            </header> 
+
+            <main class="page">
+                <section class="page__section page__section__1">
+                    
+                    <div class="full-screen-img">
+                        
+                            <div class="full-screen-img__body">
+                                
+                                <div class="full-screen-img__title"><h1 class="main-title">Surfing</h1></div>
+                                
+                                <div class="wave-btn">
+                                    <span class="wave-btn__text"><a data-goto=".page__section__6" href="#" class="menu__link btn-text">Sign up</a></span>
+                                    <div class="wave-btn__waves"></div>
+                                </div>
+
+                            </div>
+                        <div class="full-screen-img__img"></div>
+                    
+                    </div>
+                </section>
+
+
+                <section class="page__section page__section__2">
+                    
+                    <div class="full-screen-video">
+                        <div class="full-screen-video__body">
+                            <div class="full-screen-video__title"><h2>About us</h2></div>
+                            <div class="full-screen-video__text">
+                                <p class="text-font">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore debitis! A dolores, labore repudiandae maxime sapiente odio neque ad exercitationem facilis at cum iusto quos natus sequi? Deserunt, mollitia!
+                                    Illum molestiae quidem amet eaque saepe itaque inventore, doloribus explicabo asperiores blanditiis delectus quibusdam minus repudiandae laborum alias porro ipsa est, unde exercitationem voluptatem. Omnis, tempora perferendis. Autem, fugit reprehenderit!
+                                    e saepe. Accusamus deserunt voluptates earum quibusdam nostrum architecto fuga facilis, illo doloremque, maxime nihil! Alias, beatae. Quibusdam culpa nisi alias architecto ut!
+                                </p>    
+                            </div>
+                        </div>
+                        <video autoplay muted loop preload="auto" class="full-screen-video__video">
+                            <source type="video/mp4" src="./video/wave_bg_short_version.mp4">
+                        </video>
+                    </div>
+                </section>
+                
+
+                <section class="page__section page__section__3">
+                    <div class="swiper__title"><h2>Swiper</h2></div>
+                    <!-- Swiper -->
+                    <div class="swiper">
+                        
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/slider1.jpg" alt="" class="slider-img"></div>
+                            <div class="swiper-slide"><img src="./img/slider2.jpg" alt="" class="slider-img"></div>
+                            <div class="swiper-slide"><img src="./img/slider3.jpg" alt="" class="slider-img"></div>
+                            <div class="swiper-slide"><img src="./img/slider4.jpg" alt="" class="slider-img"></div>
+                            <div class="swiper-slide"><img src="./img/slider5.jpg" alt="" class="slider-img"></div>
+                        </div>
+                        <!--<img src="./img/dark_sea.jpg" alt="" class="full-screen-img">-->
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </section>
+                
+
+                <section class="page__section page__section__4">
+                    <div class="full-screen-img-2">
+                        <div class="vertical__title"><h2>Our possibilities</h2></div>
+                        <div class="full-screen-img-2__body">
+                            <div class="vertical1">
+                                <div class='container'>
+                                    
+                                    <div class="vertical__body">
+                                        <div class="vertical__row">
+                                            <div class="vertical__column1 image-fixed">
+                                                <div class="vertical__item">
+                                                    <img  src="./img/blue_tick.jpg" alt="" class="blue-tick">
+                                                    <div class="vertical__subtitle"><h3>Title 1</h3></div>
+                                                    <div class="vertical__text">
+                                                        <p class="text-font-block">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vertical__column1 image-fixed">
+                                                <div class="vertical__item">
+                                                    <img height="20px" width="20px" src="./img/blue_tick.jpg" alt="" class="blue-tick">
+                                                    <div class="vertical__subtitle"><h3>Title 2</h3></div>
+                                                    <div class="vertical__text">
+                                                        <p class="text-font-block">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum.
+                                                        </p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="vertical__column1 image-fixed">
+                                                <div class="vertical__item">
+                                                    <img height="20px" width="20px" src="./img/blue_tick.jpg" alt="" class="blue-tick">
+                                                    <div class="vertical__subtitle"><h3>Title 3</h3></div>
+                                                    <div class="vertical__text">
+                                                        <p class="text-font-block">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum.
+                                                        </p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="vertical2">
+                                <div class='container'>
+                                    
+                                    <div class="vertical__body">
+                                        <div class="vertical__row">
+                                            <div class="vertical__column2 image-fixed">
+                                                <div class="vertical__item">
+                                                    <img height="20px" width="20px" src="./img/blue_tick.jpg" alt="" class="blue-tick">
+                                                    <div class="vertical__subtitle"><h3>Title 4</h3></div>
+                                                    <div class="vertical__text">
+                                                        <p class="text-font-block">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vertical__column2 image-fixed">
+                                                <div class="vertical__item">
+                                                    <img height="20px" width="20px" src="./img/blue_tick.jpg" alt="" class="blue-tick">
+                                                    <div class="vertical__subtitle"><h3>Title 5</h3></div>
+                                                    <div class="vertical__text">
+                                                        <p class="text-font-block">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum.
+                                                        </p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+
+                <section class="page__section page__section__5">
+                    <div class="gallerry-wrapper"> 
+
+                        <div class="gallery-title">
+                            <h2 >Gallery</h2>
+                        </div>
+
+                        <div class="gallery">
+                            
+                            <div class="gallery__card">
+                                <span class="gallery-item-text gallery-text">Посмотреть</span>
+                            <img
+                                class="gallery__card__pic"
+                                src="https://images.unsplash.com/photo-1593460354583-4224ab273cfe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1973&q=80"
+                                alt="BMW"
+                            />
+                            </div>
+                            <div class="gallery__card">
+                                <span class="gallery-item-text gallery-text">Посмотреть</span>
+                            <img
+                                class="gallery__card__pic"
+                                src="https://images.unsplash.com/photo-1546518071-fddcdda7580a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1964&q=80"
+                                alt="Mercedes"
+                            />
+                            </div>
+                            <div class="gallery__card">
+                                <span class="gallery-item-text gallery-text">Посмотреть</span>
+                            <img
+                                class="gallery__card__pic"
+                                src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2051&q=80"
+                                alt="Toyota"
+                            />
+                            </div>
+                            <div class="gallery__card">
+                                <span class="gallery-item-text gallery-text">Посмотреть</span>
+                            <img
+                                class="gallery__card__pic"
+                                src="https://images.unsplash.com/photo-1611396058741-1d570a4fcf95?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+                                alt="Mitsubisi"
+                            />
+                            </div>
+                            <div class="gallery__card">
+                                <span class="gallery-item-text gallery-text">Посмотреть</span>
+                            <img
+                                class="gallery__card__pic"
+                                src="https://images.unsplash.com/photo-1625037669052-7e033716f325?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+                                alt="KIA"
+                            />
+                            </div>
+                            <div class="gallery__card">
+                                <span class="gallery-item-text gallery-text">Посмотреть</span>
+                            <img
+                                class="gallery__card__pic"
+                                src="./img/vertical.jpg"
+                                alt="HAVAL"
+                            />
+                            </div>
+                        </div>
+            
+                        <div class="slider">
+                            <div class="slider__container">
+                            <button class="slider__btn slider__btn_left">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="slider__btn slider__btn_right">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            </div>
+                            <button class="slider__close">
+                            <i class="far fa-times-circle"></i>
+                            </button>
+                        </div>
+                    </div>   
+                </section>
+                
+                <section class="page__section page__section__6">
+                    <div class="last-page">
+                        <div class="form-title-form__box">
+                            <h2 class="form__title">Sign up</h2>
+                            <div class="form">
+                                
+                                <form action="#" id="form" class="form__body">
+                                    
+                                    <div class="form__item">
+                                        <label for="formName" class="form__label"><h4>Имя*:</h4></label>
+                                        <input type="text" name="name" id="formName" class="form__input _req" required>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="formEmail" class="form__label"><h4>E-mail*:</h4></label>
+                                        <input type="text" name="email" id="formEmail" class="form__input _req _email" required>
+                                    </div>
+                                    <div class="form__item">
+                                        <div class="form__label"><h4>Пол</h4></div>
+                                        <div class="options">
+                                            <div class="options__item">
+                                                <input checked id="formMale" value="male" type="radio" name="gender" id="formName" class="options__input">
+                                                <label for="formMale" class="options__label"><span class="form-text">Мужской</span></label>
+                                            </div>
+                                            <div class="options__item">
+                                                <input id="formFemale" value="female" type="radio" name="gender" id="formName" class="options__input">
+                                                <label for="formFemale" class="options__label"><span class="form-text">Женский</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="formMassage" class="form__label"><h4>Сообщение</h4></label>
+                                        <textarea name="massage" id="formMassage" class="form__input"></textarea>
+                                    </div>
+                                    <div class="form__item form-text">
+                                        <div class="form__label"><h4>Возраст:</h4></div>
+                                        <select class="select" name="age">
+                                            <option disabled>Выбрать</option>
+                                            <option value="от 18 до 25">от 18 до 25</option>
+                                            <option value="от 25 до 45">от 25 до 45</option>
+                                            <option value="от 45">от 45</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__item">
+                                        <div class="form__label"><h4>Прикрепить фото</h4></div>
+                                        <div class="file">
+                                            <div class="file__item">
+                                                <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+                                                <div class="file__button form-text">Выбрать</div>
+                                            </div>
+                                            <div id="formPreview" class="file__preview"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form__item">
+                                        <div class="checkbox">
+                                            <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req" required>
+                                            <label for="formAgreement" class="checkbox__label"><span class="form-copyright-text">Я даю согласие на обработку персональных данных</span></label>
+                                        </div>
+                                    </div>
+                                    <button type='submit' class="form__button">
+                                        <!---->
+                                        <div class="wave-btn">
+                                            <span class="wave-btn__text btn-text">Submit</span>
+                                            <div class="wave-btn__waves"></div>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="location-title page__section page__section__7">
+                            <div class="loc-title"><h2>Location</h2></div>
+                            <div class="location">
+                                <div class="location-box" id="map" style="height:100%; width:100%">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63100.033297695954!2d115.1345034!3d-8.7150764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246bf6a5ac207%3A0x544423eb5a3ad8ed!2z0KjQutC-0LvQsCDRgdC10YDRhNC40L3Qs9CwIFN1cmYgRGlzY292ZXJ5INCR0LDQu9C4!5e0!3m2!1sru!2sus!4v1662580151001!5m2!1sru!2sus" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-100"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>    <!---->
+            
+                <section class="page__section page__section__8">
+                    <footer>
+                        <div class="footer__container">
+                            <div class="footer__container__contact__logo__about">
+                                <div class="footer__contacts footer-text">
+                                    <h3 class="contacts__title">Contacts</h3>
+                                    <hr class="contacts__line"><!--Горизонтальная линия-->
+                                    <style>hr.contacts__line {
+                                        display: flex;
+                                        margin-bottom: 10px;
+                                        width: 100%; /*227px*/
+                                        height: 3px;
+                                        border: 1;
+                                        box-shadow: inset 0 9px 9px -3px rgb(255, 255, 255);
+                                        -webkit-border-radius: 5px;
+                                        -moz-border-radius: 5px;
+                                        -ms-border-radius: 5px;
+                                        -o-border-radius: 5px;
+                                        border-radius: 5px;
+                                    }</style>
+                                    <div class="contact__types">
+                                        <span class="contact__type">C:</span>
+                                        <a href="tel:+380502577956" class="contact__link footer-text">+38 (050) 257-79-56</a> 
+                                    </div>
+                                    <div class="contact__types">
+                                        <span class="contact__type">E:</span>
+                                        <a href="mailto:andrejbibik555@gmail.com" class="contact__link footer-text">andrejbib555@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="footer__logo">
+                                    <span class="footer__logo__title">Surfing</span>
+                                    <div class="footer__logo__img__container"><img class="footer__logo__img" src="./img/logo-surfing.png" alt=""></div>
+                                </div>
+
+                                <div class="footer__about">
+                                    <h3 class="about__title">About us</h3>
+                                    <hr class="about__line"><!--Горизонтальная линия-->
+                                    <style>hr.about__line {
+                                        display: flex;
+                                        margin-bottom: 10px;
+                                        width: 100%;
+                                        height: 3px;
+                                        border: 1;
+                                        box-shadow: inset 0 9px 9px -3px rgb(255, 255, 255);
+                                        -webkit-border-radius: 5px;
+                                        -moz-border-radius: 5px;
+                                        -ms-border-radius: 5px;
+                                        -o-border-radius: 5px;
+                                        border-radius: 5px;
+                                    }</style>
+                                        <span class="about__text footer-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam inventore, temporibus facilis neque ab eius! Inventore nihil mollitia error natus explicabo.</span>
+                                </div>
+                            </div>
+                            <hr class="socials__line"><!--Горизонтальная линия-->
+                            <style>hr.socials__line {
+                                display: flex;
+                                margin: auto;
+                                width: 100%;
+                                height: 3px;
+                                border: 1;
+                                box-shadow: inset 0 9px 9px -3px rgb(255, 255, 255);
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                -ms-border-radius: 5px;
+                                -o-border-radius: 5px;
+                                border-radius: 5px;
+                            }</style>
+
+                            <div class="footer__socials__wrapper">
+                                <div class="footer__socials">
+                                    
+                                        <div class="icon telegram">
+                                            <div class="toolflip">Telegram</div>
+                                            <span><i class="fab fa-telegram"></i></span>
+                                        </div>
+                                        <div class="icon instagram">
+                                            <div class="toolflip">Instagram</div>
+                                            <span><i class="fab fa-instagram"></i></span>
+                                        </div>
+                                        <div class="icon  facebook">
+                                            <div class="toolflip">Facebook</div>
+                                            <span><i class="fab fa-facebook-f"></i></span>
+                                        </div>
+                                        <div class="icon twitter">
+                                            <div class="toolflip">Twitter</div>
+                                            <span><i class="fab fa-twitter"></i></span>
+                                        </div>
+                                    
+                                    
+                                        <div class="icon youtube">
+                                            <div class="toolflip">YouTube</div>
+                                            <span><i class="fab fa-youtube"></i></span>
+                                        </div>
+                                        <div class="icon github">
+                                            <div class="toolflip">Github</div>
+                                            <span><i class="fab fa-github"></i></span>
+                                        </div>
+                                        <div class="icon whatsapp">
+                                            <div class="toolflip">Whatsapp</div>
+                                            <span><i class="fab fa-whatsapp"></i></span>
+                                        </div>
+                                        <div class="icon viber">
+                                            <div class="toolflip">Viber</div>
+                                            <span><i class="fab fa-viber"></i></span>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__copyright">
+                            <span class="footer__copyright__text copyright-text">Copyright © 2022, Bibik A.S. All rights reserved </span>
+                        </div>
+                        
+                    </footer>
+                    
+                </section>
+            
+        </div>
+
+        <!-- Header JS-->
+        <script src="./js/headerscroll.js"></script> 
+        <script src="./js/headersection.js"></script>
+        
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="./js/swiper1.js"></script>
+        <script src="./js/swiper2.js"></script>
+        <!-- Gallary JS -->
+        <script src="./js/gallery.js"></script>
+        <script src="https://kit.fontawesome.com/fce9a50d02.js" crossorigin="anonymous"></script>
+        <!-- Form JS -->
+        <script src="./js/form.js"></script>
+        <!-- Select JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./js/select.js"></script>
+
+        <!--Footer-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+        <script src="./js/myMap.js"></script>
+    </body>
+</html>
