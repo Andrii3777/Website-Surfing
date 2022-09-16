@@ -78,45 +78,50 @@ h2::after {
 }
 
 h3 {
-    font-size: calc(18px + 7 * (100vw / 1280));
+    font-size: calc(20px + 7 * (100vw / 1280));
     color: white;
     font-family: AppleBold;
     /*letter-spacing: 3px;*/
 }
 h4, .menu__link  {
-    font-size: calc(14px + 6 * (100vw / 1280));
+    font-size: calc(16px + 6 * (100vw / 1280));
     color: white;
     font-family: AppleSemiBold;
 }
 .menu__link  {
     font-family: AppleRegular;
 }
+/*{
+    font-family: AppleRegular;
+    font-size: calc(20px + 5 * (100vw / 1280));
+    color: white;
+}*/
 
 .btn-text {
-    font-size: calc(14px + 8 * (100vw / 1280));
+    font-size: calc(16px + 8 * (100vw / 1280));
     color: white;
     font-family: AppleBold;
     letter-spacing: 2px;
 }
 .text-font {
     font-family: AppleRegular;
-    font-size: calc(12px + 9 * (100vw / 1280));
+    font-size: calc(14px + 9 * (100vw / 1280));
     color: white;
 
-    line-height: calc((12px + 9 * (100vw / 1280)) + 8px);
+    line-height: calc((14px + 9 * (100vw / 1280)) + 8px);
     /*font-weight: 500;*/
     letter-spacing: 2px;
 }
 .text-font-block, .footer-text {
     font-family: AppleRegular;
-    font-size: calc(12px + 9 * (100vw / 1280));
+    font-size: calc(16px + 9 * (100vw / 1280));
     color: white;
     text-indent: 2px;
     line-height: 30px;
 }
 .form-text, .gallery-text {
     font-family: AppleRegular;
-    font-size: calc(10px + 8 * (100vw / 1280));
+    font-size: calc(14px + 8 * (100vw / 1280));
     color: white;
 }
 .copyright-text, .form-copyright-text {
@@ -143,10 +148,10 @@ p {
         font-size: calc(14px + (12 + 12 * 0.7) * ((100vw - 320px) / 1280));
     }
     h3 {
-        font-size: calc(18px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(20px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
     }
     h4, .menu__link {
-        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
     }
     /*.menu__link {
 
@@ -154,12 +159,12 @@ p {
         color: white;
     }*/
     .text-font {
-        font-size: calc(12px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
-        line-height: calc((12px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
+        font-size: calc(14px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
+        line-height: calc((14px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280)) + 8px);
         
     }
-    text-font-block {
-        font-size: calc(12px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
+    .text-font-block, .footer-text  {
+        font-size: calc(16px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
         /*line-height: calc((18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280)) + 8px);*/
         /*font-weight: 600;*/
     }
@@ -170,10 +175,10 @@ p {
         font-size: calc(30px + (14 + 14 * 0.7) * ((100vw - 320px) / 1280));
     }
     .form-text, .gallery-text {
-        font-size: calc(10px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
     }
     .btn-text {
-        font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
     }
 }
 
@@ -231,9 +236,7 @@ p {
 .menu__icon__hamb {
     display: none;
 }
-.menu__body {
 
-}
 .menu__list > li{/*обращаемся к первым дочерним ли*/
     position: relative;
     margin-left: 20px;
@@ -373,27 +376,31 @@ a.underline_c:after {
     .menu__body {
         position: fixed;
         top: 0;
-        text-align: center;
+        
         left: 100vw;
         /*width: 40vw;width: 90vw;*/
-        width: 250px;
+        width: 240px;
         height: 100vh;z-index: 10;
-        background-image: linear-gradient(to right top, #03052bb8, #0c0d35bd, #19103fbd, #271048b6, #370f50bb, #460e56b3, #550a5ab9, #64045eb3, #750162bd, #870063b5, #970065b8, #a80065b2);
-        background-color: rgba(0, 0, 0, 0.63);
-        /*
+        background-image: linear-gradient(to right top, #2b0f09a7, #4d271fac, #704132aa, #955f44a4, #ba7f57af, #ce935fa9, #e2a768ab, #f4bd71ac, #faca72aa, #fdd873a9, #ffe876b1, #fff87ba5);
+    
+        /*background-image: linear-gradient(to right top, #03052bb8, #0c0d35bd, #19103fbd, #271048b6, #370f50bb, #460e56b3, #550a5ab9, #64045eb3, #750162bd, #870063b5, #970065b8, #a80065b2);
+        */background-color: rgba(84, 40, 7, 0.728);
+        /*text-align: center;
          backdrop-filter: blur(198px);
         background-color: rgba(0, 0, 0, 0.388);
         background-image: url(../img/blured_surfer.jpg);
         background-size: cover;
-        background-position: center center;*/
-        padding-top: 20vh;
+        background-position: center center;
+        */
+        padding-top: 12vh;
         padding-bottom: 10vh;
+        padding-left: 5vh;
         transition: all 0.3s ease 0s;
         overflow: auto;/*чтобы прокручивася сам хедер*/
     }
     
     .menu__body._active {
-        left: calc(100vw - 250px);/*left: 15%;*/
+        left: calc(100vw - 240px);/*left: 15%;*/
     }
 
     .menu::before{
@@ -448,40 +455,74 @@ a.underline_c:after {
     display: flex;
     flex-direction: column;
 }
-
-.full-screen-img__body {
-    /*border: 0px solid #ece89d;margin: 50px;*/
-    padding-left: 10vw;
-    padding-top: 40vh;
-    padding-right: 7vw;
-    padding-bottom: 5vh;
-    
-    /*background: rgba(0, 0, 0, 0.242);*/
-    min-height: 100vh;
-    position: relative;
-    z-index: 2; /*свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index*/
-    display: flex;
-    flex: 1 1 auto; 
-    /*позволяем увеличиватьс
-    flex - это сокращённое свойство, определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства.
-    flex-grow: 0/1; элемент не может/может расти/растягиваться больше, чем исходный размер
-    flex-shrink: 1; элемент может сжиматься меньше, чем исходный размер
-    flex-basis: auto; исходный размер равен auto, то есть равен просто ширине элемента, но ширина элемента не задана, поэтому по содержимому
-    flex-basis: 100%; базовый размер (ширина) элемента-кнопки: теперь он равен 100% ширины родителя.
-    */
-    justify-content: space-between;/*определяет выравнивание вдоль основной оси*/
-    align-items: flex-start;/*определяет выравнивание вдоль НЕосновной оси*/
-    flex-direction: column;
-    
+/*это свойство применится только для экранов шире n пикселей*/
+@media (min-width: 450px){
+    .full-screen-img__body {
+        /*border: 0px solid #ece89d;margin: 50px;*/
+        padding-left: 10vw;
+        padding-top: 40vh;
+        padding-right: 7vw;
+        padding-bottom: 5vh;
+        
+        /*background: rgba(0, 0, 0, 0.242);*/
+        min-height: 100vh;
+        position: relative;
+        z-index: 2; /*свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index*/
+        display: flex;
+        flex: 1 1 auto; 
+        /*позволяем увеличиватьс
+        flex - это сокращённое свойство, определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства.
+        flex-grow: 0/1; элемент не может/может расти/растягиваться больше, чем исходный размер
+        flex-shrink: 1; элемент может сжиматься меньше, чем исходный размер
+        flex-basis: auto; исходный размер равен auto, то есть равен просто ширине элемента, но ширина элемента не задана, поэтому по содержимому
+        flex-basis: 100%; базовый размер (ширина) элемента-кнопки: теперь он равен 100% ширины родителя.
+        */
+        justify-content: space-between;/*определяет выравнивание вдоль основной оси*/
+        align-items: flex-start;/*определяет выравнивание вдоль НЕосновной оси*/
+        flex-direction: column;
+        
+    }
+    .full-screen-img__title {
+        position: relative;
+        align-self:flex-end;/*Переопределяет для конкретного flex-элемента выравнивание вдоль поперечной оси (направление зависит от значения свойства flex-direction)*/
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+    }
 }
-
-
- .full-screen-img__title {
+@media (max-width: 450px){
+    .full-screen-img__body {
+        /*border: 0px solid #ece89d;margin: 50px;*/
+        padding-left: 10vw;
+        padding-top: 35vh;
+        padding-right: 7vw;
+        padding-bottom: 7vh;
+        
+        /*background: rgba(0, 0, 0, 0.242);*/
+        min-height: 100vh;
+        position: relative;
+        z-index: 2; /*свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index*/
+        display: flex;
+        flex: 1 1 auto; 
+        /*позволяем увеличиватьс
+        flex - это сокращённое свойство, определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства.
+        flex-grow: 0/1; элемент не может/может расти/растягиваться больше, чем исходный размер
+        flex-shrink: 1; элемент может сжиматься меньше, чем исходный размер
+        flex-basis: auto; исходный размер равен auto, то есть равен просто ширине элемента, но ширина элемента не задана, поэтому по содержимому
+        flex-basis: 100%; базовый размер (ширина) элемента-кнопки: теперь он равен 100% ширины родителя.
+        */
+        justify-content: space-between;/*определяет выравнивание вдоль основной оси*/
+        align-items: flex-start;/*определяет выравнивание вдоль НЕосновной оси*/
+        flex-direction: column;
+        
+    }
+    .full-screen-img__title {
     position: relative;
     align-self:flex-end;/*Переопределяет для конкретного flex-элемента выравнивание вдоль поперечной оси (направление зависит от значения свойства flex-direction)*/
     margin: 0 0 10px 0;
     text-transform: uppercase;
 }
+}
+ 
 
 .main-title{
     color: #86fbff32;
@@ -494,8 +535,11 @@ a.underline_c:after {
 
 
 .full-screen-img__img {
+    background-image: linear-gradient(to right top, #2b0f09, #4d271f, #704132, #955f44, #ba7e57, #ce925f, #e2a768, #f4bd71, #facb72, #fdd973, #ffe976, #fff87b);
+    
+    /*background-image: linear-gradient(to right top, #000000, #100108, #190312, #1d061b, #1d0a26, #1e0c2e, #1d0e37, #1a1040, #1e0e47, #230b4e, #290654, #30005a);
     background-image: linear-gradient(to right top, #03052b, #0c0d35, #19103f, #271048, #370f50, #460e56, #550a5a, #64045e, #750161, #870063, #970064, #a80064);
-    /*background-image: url(../img/dark-leafs.jpg);
+    background-image: url(../img/dark-leafs.jpg);
     background-image: linear-gradient(to right top, #ea4e00, #f7163a, #f60063, #e4008e, #bf00b7, #9f45d8, #7063f0, #007aff, #00a3ff, #00c4ff, #00e2ff, #5ffbf1);
     *//*box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(2px);*/
@@ -576,13 +620,38 @@ a.underline_c:after {
 /*Третья страница блоки =================================*/
 
 .image-fixed {
-    background-image: url(../img/shot_on_top_ocean.jpg);
+    background-image: url(../img/blocks.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-position: center center;
     border-radius: 7px;
     transition-duration:  0.4s;       
 }
 
+.vertical__item {
+	background-color:  #0000005e;
+	border-radius: 8px;
+	color: #fff;
+    box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.724);
+    /*border: solid rgba(163, 163, 163, 0);*/
+	display: flex;
+	flex-direction: column;
+	/*padding: 0px 0px 15px 0px;
+    transition: all 0.3s;*/
+}
+
+
+.no-touch .vertical__item:hover {
+	background-color:  #000000a3;
+	border-radius: 8px;
+	color: #fff;
+    box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.724);
+    /*border: solid rgba(163, 163, 163, 0);*/
+	display: flex;
+	flex-direction: column;
+	/*padding: 0px 0px 15px 0px;
+    transition: all 0.3s;*/
+}
 .full-screen-img-2 {
     position: relative;
     display: flex;
@@ -733,25 +802,6 @@ a.underline_c:after {
 
 
 
-.no-touch .image-fixed:hover {
-    background-image: url(../img/shot_on_top_ocean_blurred.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    border-radius: 7px;
-    
-       
-}
-.no-touch.vertical__item:hover {
-	background-color:  #0000006e;
-	border-radius: 8px;
-	color: #fff;
-    box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.724);
-    /*border: solid rgba(163, 163, 163, 0);*/
-	display: flex;
-	flex-direction: column;
-	/*padding: 0px 0px 15px 0px;
-    transition: all 0.3s;*/
-}
 
 .vertical__subtitle {
 	text-align: start;
@@ -1037,7 +1087,7 @@ a.underline_c:after {
        margin-top: 0;
         margin-bottom: 0px;
         max-width: calc(30vw);
-        background: rgba(4, 19, 91, 0.532);
+        background: rgba(4, 19, 91, 0.354);
         color: white;
         padding: 3vh 3vw;
         border-radius: 7px;
@@ -1105,7 +1155,7 @@ a.underline_c:after {
         flex: 0 1 100%;
         
         max-width: 50vw;
-        background: rgba(4, 19, 91, 0.532);
+        background: rgba(4, 19, 91, 0.374);
         color: white;
         padding: 3vh 3vw;
         border-radius: 7px;
@@ -1182,7 +1232,7 @@ a.underline_c:after {
         margin-right: 5vw;
         margin-left: 5vw;
         max-width: 78vw;
-        background: rgba(4, 19, 91, 0.532);
+        background: rgba(4, 19, 91, 0.352);
         color: white;
         padding: 3vh 3vw;
         border-radius: 7px;
@@ -1251,7 +1301,7 @@ a.underline_c:after {
         margin-right: 5vw;
         margin-left: 5vw;
         max-width: 97vw;
-        background: rgba(4, 19, 91, 0.532);
+        background: rgba(4, 19, 91, 0.358);
         color: white;
         padding: 3vh 3vw;
         border-radius: 7px;
@@ -1654,15 +1704,23 @@ a.underline_c:after {
 .contact__types {
     margin: 5px;
 }
+.footer__container {
+    background-image: linear-gradient(to right top, #251709, #331d0a, #41230b, #50290c, #602e0d, #6f3812, #7e4218, #8e4c1d, #9f5e29, #af7135, #c08442, #d09750);
+}
+.footer__copyright {
+    background-image: linear-gradient(to right top, #000000, #100607, #1b0c0b, #22100d, #2a140d, #2e160c, #32190b, #351c0a, #361d09, #371f08, #382006, #392205);
+}
 @media (min-width: 1180px){
     .footer__container {
         position: relative;
         z-index: 2;
         /*display: flex;*/
         /*background-image: url(../img/dark_sea.jpg);
-        background-size: cover;*/
+        background-size: cover;
         background-image: linear-gradient(to right top, #090909, #120e1f, #131232, #131445, #111559, #1a1665, #231770, #2e167b, #3f167f, #4e1784, #5c1787, #6a178b);
-        margin-bottom: 0;
+        
+        background-image: linear-gradient(to right top, #251709, #39200b, #4f290c, #66320c, #7f3a0c, #944a11, #a85b15, #bd6c19, #cf8b27, #deaa39, #ecca4e, #f7eb68);
+        */margin-bottom: 0;
         min-height: 100%;
         padding: 30px 7vw;
         padding-bottom: 15px;/**/
@@ -1746,8 +1804,8 @@ a.underline_c:after {
         z-index: 2;
         display: flex;
         justify-content: center;
-        background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
-        height: 100%;
+        /*background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
+        */height: 100%;
         padding-bottom: 15px;
         padding-top: 15px;
     }
@@ -1758,9 +1816,9 @@ a.underline_c:after {
         z-index: 2;
         /*display: flex;*/
         /*background-image: url(../img/dark_sea.jpg);
-        background-size: cover;*/
+        background-size: cover;
         background-image: linear-gradient(to right top, #090909, #120e1f, #131232, #131445, #111559, #1a1665, #231770, #2e167b, #3f167f, #4e1784, #5c1787, #6a178b);
-        margin-bottom: 0;
+       */ margin-bottom: 0;
         min-height: 100%;
         /**/padding: 15px 5vw;
         padding-bottom: 15px;
@@ -1818,8 +1876,8 @@ a.underline_c:after {
         z-index: 2;
         display: flex;
         justify-content: center;
-        background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
-        height: 100%;
+        /*background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
+        */height: 100%;
         padding-bottom: 15px;
         padding-top: 15px;
     }
@@ -1830,9 +1888,9 @@ a.underline_c:after {
         z-index: 2;
         /*display: flex;*/
         /*background-image: url(../img/dark_sea.jpg);
-        background-size: cover;*/
+        background-size: cover;
         background-image: linear-gradient(to right top, #090909, #120e1f, #131232, #131445, #111559, #1a1665, #231770, #2e167b, #3f167f, #4e1784, #5c1787, #6a178b);
-        margin-bottom: 0;
+        */margin-bottom: 0;
         min-height: 100%;
         padding: 15px 3vw;
         padding-bottom: 15px;/**/
@@ -1892,16 +1950,65 @@ a.underline_c:after {
     .footer__socials .icon span i{
         font-size: 25px;
         line-height: 50px;
+        color: rgb(255, 255, 255);
      }
     .footer__copyright {
         position: relative;
         z-index: 2;
         display: flex;
         justify-content: center;
-        text-align: center;
+        text-align: center;/*
         background-image: linear-gradient(to right top, #000000, #030001, #050104, #060207, #06030a, #070311, #070416, #05051b, #060423, #07042c, #070233, #07013b);
-        height: 100%;
+        */height: 100%;
         padding: 15px 3vw;
+    }
+    .footer__socials .telegram span,
+    .footer__socials .telegram .toolflip,
+    .footer__socials .telegram .toolflip:before {
+        background: #229ED9;
+    }
+    .footer__socials .instagram span
+    {
+        background-image: url(../img/instagram.png);
+        background-size: cover;
+    }
+    .footer__socials .instagram .toolflip{
+        background-image: url(../img/instagram-toolflip.png);
+        background-size: cover;
+    }
+    .footer__socials .instagram .toolflip:before{
+        background-image: url(../img/instagram-toolflip-before.png);
+        background-size: cover;
+    }
+    .footer__socials .facebook span,
+    .footer__socials .facebook .toolflip,
+    .footer__socials .facebook .toolflip:before {
+        background: #3B5999;
+    }
+    .footer__socials .twitter span,
+    .footer__socials .twitter .toolflip,
+    .footer__socials .twitter .toolflip:before {
+        background: #46C1F6;
+    }
+    .footer__socials .youtube span,
+    .footer__socials .youtube .toolflip,
+    .footer__socials .youtube .toolflip:before {
+        background: #ef0202;
+    }
+    .footer__socials .github  span,
+    .footer__socials .github.toolflip,
+    .footer__socials .github .toolflip:before {
+        background: #333;
+    }
+    .footer__socials .viber span,
+    .footer__socials .viber .toolflip,
+    .footer__socials .viber .toolflip:before {
+        background: #7360f2;
+    }
+    .footer__socials .whatsapp span,
+    .footer__socials .whatsapp .toolflip,
+    .footer__socials .whatsapp .toolflip:before {
+        background: #25d466;
     }
 }
 
