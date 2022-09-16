@@ -88,11 +88,9 @@ h4, .menu__link  {
     color: white;
     font-family: AppleSemiBold;
 }
-/*{
+.menu__link  {
     font-family: AppleRegular;
-    font-size: calc(20px + 5 * (100vw / 1280));
-    color: white;
-}*/
+}
 
 .btn-text {
     font-size: calc(14px + 8 * (100vw / 1280));
