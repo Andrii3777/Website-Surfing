@@ -535,7 +535,7 @@ a.underline_c:after {
 
 
 .full-screen-img__img {
-    background-image: linear-gradient(to right top, #2b0f09, #4d271f, #704132, #955f44, #ba7e57, #ce925f, #e2a768, #f4bd71, #facb72, #fdd973, #ffe976, #fff87b);
+    background-image: linear-gradient(347deg, rgba(0,0,0,1) 0%, rgba(0,10,149,1) 37%, rgba(167,254,237,1) 100%);
     
     /*background-image: linear-gradient(to right top, #000000, #100108, #190312, #1d061b, #1d0a26, #1e0c2e, #1d0e37, #1a1040, #1e0e47, #230b4e, #290654, #30005a);
     background-image: linear-gradient(to right top, #03052b, #0c0d35, #19103f, #271048, #370f50, #460e56, #550a5a, #64045e, #750161, #870063, #970064, #a80064);
@@ -1697,19 +1697,19 @@ a.underline_c:after {
 
 
 
-
-
-
 /*это свойство применится только для экранов шире 1180 пикселей*/
 .contact__types {
     margin: 5px;
 }
+
 .footer__container {
-    background-image: linear-gradient(to right top, #251709, #331d0a, #41230b, #50290c, #602e0d, #6f3812, #7e4218, #8e4c1d, #9f5e29, #af7135, #c08442, #d09750);
+    background-image: linear-gradient(347deg, rgba(0,0,0,1) 0%, rgba(0,4,62,1) 56%, rgba(55,212,121,1) 100%);
 }
+
 .footer__copyright {
-    background-image: linear-gradient(to right top, #000000, #100607, #1b0c0b, #22100d, #2a140d, #2e160c, #32190b, #351c0a, #361d09, #371f08, #382006, #392205);
+    background-image: linear-gradient(to right, #000000, #050505, #090909, #0d0d0d, #111111, #111111, #111111, #111111, #0d0d0d, #090909, #050505, #000000);
 }
+
 @media (min-width: 1180px){
     .footer__container {
         position: relative;
